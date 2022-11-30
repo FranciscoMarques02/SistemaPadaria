@@ -43,5 +43,17 @@ namespace SistemaPadaria.Views
             MenuProdutos menuProdutos = new MenuProdutos(usuario);
             menuProdutos.ShowDialog();
         }
+
+        private void btnComandas_Click(object sender, EventArgs e)
+        {
+            MenuComandas menuComandas = new MenuComandas(usuario);
+            menuComandas.ShowDialog();
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+            MenuCaixa menuCaixa = new MenuCaixa();
+            menuCaixa.ShowDialog();
+        }
     }
 }

@@ -40,9 +40,9 @@ namespace SistemaPadaria.Banco
 
         public static DataTable ListarTudo()
         {
-            string comando = "SELECT id, nome, preco, id_categoria, id_respcadastro " +
-                "FROM produtos";
-
+            string comando = "SELECT id AS 'ID', nome AS 'Nome', preco AS 'Preço', " +
+                "id_categoria AS 'IdCategoria', id_respcadastro AS 'IdRespCadastro' FROM produtos";
+            
             ConexaoBD conexaoBD = new ConexaoBD();
             MySqlConnection con = conexaoBD.ObterConexao();
             MySqlCommand cmd = new MySqlCommand(comando, con);

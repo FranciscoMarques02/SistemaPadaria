@@ -47,7 +47,6 @@
             this.lblNomeCad = new System.Windows.Forms.Label();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             this.lblInformacao = new System.Windows.Forms.Label();
             this.cmbCategoriaCad = new System.Windows.Forms.ComboBox();
             this.cmbCategoriaEdi = new System.Windows.Forms.ComboBox();
@@ -245,9 +244,17 @@
             // 
             // dgvProdutos
             // 
+            this.dgvProdutos.AllowUserToAddRows = false;
+            this.dgvProdutos.AllowUserToDeleteRows = false;
+            this.dgvProdutos.AllowUserToOrderColumns = true;
+            this.dgvProdutos.AllowUserToResizeColumns = false;
+            this.dgvProdutos.AllowUserToResizeRows = false;
+            this.dgvProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProdutos.Location = new System.Drawing.Point(16, 34);
+            this.dgvProdutos.MultiSelect = false;
             this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.ReadOnly = true;
             this.dgvProdutos.Size = new System.Drawing.Size(772, 273);
             this.dgvProdutos.TabIndex = 12;
             this.dgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellClick);
@@ -261,18 +268,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(271, 22);
             this.lblTitulo.TabIndex = 11;
             this.lblTitulo.Text = "Gerenciamento de Produtos";
-            // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(708, 597);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 34);
-            this.btnSair.TabIndex = 10;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
             // 
             // lblInformacao
             // 
@@ -313,7 +308,6 @@
             this.Controls.Add(this.grbCadastro);
             this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblInformacao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MenuProdutos";
@@ -348,7 +342,6 @@
         private System.Windows.Forms.Label lblNomeCad;
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblInformacao;
         private System.Windows.Forms.TextBox txbPrecoEdi;
         private System.Windows.Forms.Label lblPrecoEdi;

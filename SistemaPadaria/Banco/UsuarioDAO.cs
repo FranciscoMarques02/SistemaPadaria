@@ -42,8 +42,8 @@ namespace SistemaPadaria.Banco
 
         public static DataTable ListarTudo()
         {
-            string comando = "SELECT id, nome_completo, email " +
-                "FROM usuarios";
+            string comando = "SELECT id AS 'ID', nome_completo AS 'Nome Completo', " +
+                "email AS 'Email' FROM usuarios";
 
             ConexaoBD conexaoBD = new ConexaoBD();
             MySqlConnection con = conexaoBD.ObterConexao();

@@ -82,7 +82,7 @@ namespace SistemaPadaria
                 pibMostrarSenha.Image = Properties.Resources.olho;
                 txbSenha.UseSystemPasswordChar = true;
             }
-
+            
         }
 
         private void txbSenha_TextChanged(object sender, EventArgs e)
@@ -96,5 +96,7 @@ namespace SistemaPadaria
                 pibMostrarSenha.Visible = true;
             }
         }
+
+               
     }
 }

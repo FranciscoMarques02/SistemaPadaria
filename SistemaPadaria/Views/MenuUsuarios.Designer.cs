@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSair = new System.Windows.Forms.Button();
             this.lblInformacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
@@ -57,18 +56,6 @@
             this.grbRemover.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSair
-            // 
-            this.btnSair.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(713, 574);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 34);
-            this.btnSair.TabIndex = 3;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            // 
             // lblInformacao
             // 
             this.lblInformacao.AutoSize = true;
@@ -92,9 +79,17 @@
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.AllowUserToOrderColumns = true;
+            this.dgvUsuarios.AllowUserToResizeColumns = false;
+            this.dgvUsuarios.AllowUserToResizeRows = false;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(16, 34);
+            this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.Size = new System.Drawing.Size(772, 273);
             this.dgvUsuarios.TabIndex = 5;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
@@ -312,7 +307,6 @@
             this.Controls.Add(this.grbCadastro);
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblInformacao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MenuUsuarios";
@@ -331,8 +325,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblInformacao;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridView dgvUsuarios;
